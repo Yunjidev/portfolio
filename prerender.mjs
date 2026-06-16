@@ -10,7 +10,12 @@ async function prerender() {
 
   try {
     const { render } = await vite.ssrLoadModule('/src/entry-server.jsx')
-    const appHtml = render()
+    let appHtml = render()
+
+    // Les src d'images pointent vers /src/assets/img/... en mode SSR dev,
+    // chemin inexistant en production. On les supprime : l'alt reste pour le SEO,
+    // React hydrate et remet les bonnes URLs hachées.
+    appHtml = appHtml.replace(/ src="(?!data:)[^"]*\.(webp|png|jpg|jpeg|gif|svg)[^"]*"/g, '')
 
     const template = readFileSync('./dist/index.html', 'utf-8')
     const result = template.replace(
