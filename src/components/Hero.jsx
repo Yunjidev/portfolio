@@ -1,7 +1,7 @@
 import { ArrowDown, ExternalLink, Code2, BookOpen, Layers } from 'lucide-react'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { SiMalt } from 'react-icons/si'
-import profilePic from '../assets/img/yunji.png'
+import profilePic from '../assets/img/yunji.webp'
 
 export default function Hero() {
   return (
@@ -81,7 +81,7 @@ export default function Hero() {
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-tiffany to-blue-600 p-[2px] flex-shrink-0">
                   <div className="w-full h-full rounded-full bg-black overflow-hidden">
-                    <img src={profilePic} alt="BLF Développement" className="w-full h-full object-cover" />
+                    <img src={profilePic} alt="BLF Développement" width="56" height="56" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div>

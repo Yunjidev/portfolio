@@ -153,6 +153,8 @@ function ProjectCard({ project, isActive }) {
         <img
           src={project.images[imgIndex]}
           alt={project.title}
+          width="380"
+          height="200"
           className="h-full w-full object-cover object-top"
           loading="lazy"
           decoding="async"
