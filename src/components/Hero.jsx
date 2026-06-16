@@ -22,7 +22,7 @@ export default function Hero() {
           {/* Heading */}
           <div className="opacity-0 animate-fade-in animate-delay-200">
             <h1 className="text-6xl md:text-[80px] leading-[0.95] tracking-tight font-medium text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/50">
-              BLF
+              BLF{' '}
               <br />
               Développement
             </h1>

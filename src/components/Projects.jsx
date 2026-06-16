@@ -152,11 +152,10 @@ function ProjectCard({ project, isActive }) {
       <div className="relative h-48 sm:h-52 overflow-hidden">
         <img
           src={project.images[imgIndex]}
-          alt={project.title}
+          alt={`Aperçu du projet ${project.title}`}
           width="380"
           height="200"
           className="h-full w-full object-cover object-top"
-          loading="lazy"
           decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#111] via-[#111]/5 to-transparent" />

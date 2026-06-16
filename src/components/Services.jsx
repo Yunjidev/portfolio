@@ -5,19 +5,19 @@ const services = [
     icon: Code2,
     title: 'Développement Web',
     description:
-      "Conception et développement d'applications web FullStack performantes, de sites vitrines à des plateformes complexes avec API et base de données. J'intègre également l'IA (LLM, génération, automatisation) pour enrichir les produits.",
+      "Conception et développement d'applications <strong>FullStack</strong> : sites vitrines, plateformes métier, APIs et bases de données. J'intègre l'<strong>IA</strong> (LLMs, génération, automatisation) pour enrichir vos produits.",
   },
   {
     icon: GraduationCap,
     title: 'Formation & Accompagnement',
     description:
-      "Formateur chez The Hacking Project, j'accompagne les apprenants tout au long de leur parcours : débogage, projets, code review et mentorat.",
+      "Formateur chez <strong>The Hacking Project</strong>. J'accompagne les apprenants en reconversion vers le web : débogage, code review, architecture de projet et mentorat personnalisé.",
   },
   {
     icon: Palette,
     title: 'Design & Intégration',
     description:
-      "Création d'interfaces modernes avec Figma et intégration pixel-perfect avec Tailwind CSS. Du maquettage à la mise en production.",
+      "Création d'interfaces modernes avec <strong>Figma</strong>. Intégration pixel-perfect avec <strong>Tailwind CSS</strong>. Du maquettage à la mise en production.",
   },
 ]
 
@@ -49,9 +49,10 @@ export default function Services() {
               <h3 className="text-xl font-medium text-white tracking-tight mb-3">
                 {service.title}
               </h3>
-              <p className="text-white/50 text-sm leading-relaxed font-light">
-                {service.description}
-              </p>
+              <p
+                className="text-white/50 text-sm leading-relaxed font-light [&_strong]:text-white/80 [&_strong]:font-medium"
+                dangerouslySetInnerHTML={{ __html: service.description }}
+              />
             </div>
           )
         })}
