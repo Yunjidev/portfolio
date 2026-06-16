@@ -1,0 +1,17 @@
+{
+  "name": "BLF Développement — Florian Van Camp",
+  "short_name": "BLF Dev",
+  "description": "Portfolio de Florian Van Camp, développeur web FullStack freelance",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#81D8D0",
+  "icons": [
+    {
+      "src": "/blf.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

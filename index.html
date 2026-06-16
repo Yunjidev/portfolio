@@ -2,10 +2,88 @@
 <html lang="fr" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/blf.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Florian Van Camp — Développeur FullStack</title>
-    <meta name="description" content="Portfolio de Florian Van Camp, développeur web FullStack basé en France." />
+
+    <!-- Favicon & identité -->
+    <link rel="icon" type="image/png" href="/blf.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/blf.png" />
+    <meta name="theme-color" content="#81D8D0" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- SEO primaires -->
+    <title>BLF Développement — Florian Van Camp, Développeur FullStack Freelance</title>
+    <meta name="description" content="Développeur web FullStack freelance basé en France. Je conçois et développe des applications web modernes avec React, Ruby on Rails, Node.js et intégration IA. Formateur chez The Hacking Project." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://blfdeveloppement.fr/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="BLF Développement" />
+    <meta property="og:url" content="https://blfdeveloppement.fr/" />
+    <meta property="og:title" content="BLF Développement — Florian Van Camp, Développeur FullStack Freelance" />
+    <meta property="og:description" content="Développeur web FullStack freelance basé en France. React, Ruby on Rails, Node.js, intégration IA. Formateur chez The Hacking Project." />
+    <meta property="og:image" content="https://blfdeveloppement.fr/blf.png" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
+    <meta property="og:image:alt" content="Logo BLF Développement" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BLF Développement — Développeur FullStack Freelance" />
+    <meta name="twitter:description" content="Développeur web FullStack freelance. React, Ruby on Rails, Node.js, IA. Basé en France, disponible en remote." />
+    <meta name="twitter:image" content="https://blfdeveloppement.fr/blf.png" />
+
+    <!-- Polices Google Fonts — preconnect puis chargement non bloquant -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" />
+
+    <!-- JSON-LD : Person + Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "name": "Florian Van Camp",
+          "jobTitle": "Développeur Web FullStack Freelance",
+          "url": "https://blfdeveloppement.fr/",
+          "email": "florian.vancamp@gmail.com",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "BLF Développement"
+          },
+          "knowsAbout": ["React", "Ruby on Rails", "Node.js", "TypeScript", "Tailwind CSS", "Intelligence Artificielle", "PostgreSQL"],
+          "sameAs": [
+            "https://github.com/Yunjidev",
+            "https://www.linkedin.com/in/florian-van-camp-102aba262/",
+            "https://www.malt.fr/profile/florianvancamp"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "name": "BLF Développement",
+          "url": "https://blfdeveloppement.fr/",
+          "logo": "https://blfdeveloppement.fr/blf.png",
+          "founder": {
+            "@type": "Person",
+            "name": "Florian Van Camp"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "florian.vancamp@gmail.com",
+            "contactType": "customer support",
+            "availableLanguage": "French"
+          },
+          "sameAs": [
+            "https://github.com/Yunjidev",
+            "https://www.linkedin.com/in/florian-van-camp-102aba262/"
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
