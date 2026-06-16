@@ -14,6 +14,7 @@ import dao2 from '../assets/img/dao2.png'
 import daofull from '../assets/img/daofull.png'
 import wiki from '../assets/img/wiki.png'
 import wiki2 from '../assets/img/wiki2.png'
+import sba from '../assets/img/sba.png'
 
 export const projects = [
   {
@@ -105,5 +106,15 @@ export const projects = [
     badge: 'Freelance',
     liveUrl: null,
     codeUrl: 'https://github.com/Yunjidev/wiki_bigtime',
+  },
+  {
+    id: 10,
+    title: 'SBA Vins',
+    description: "Outils de gestion interne pour commerciaux et entreprises du secteur vitivinicole — maintenance, développement de nouveaux modules et intégration de l'IA.",
+    images: [sba],
+    tags: ['Ruby on Rails', 'HTML', 'CSS', 'IA'],
+    badge: 'Freelance',
+    liveUrl: 'https://sbavins.com/',
+    codeUrl: null,
   },
 ]

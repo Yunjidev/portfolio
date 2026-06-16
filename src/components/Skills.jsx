@@ -15,8 +15,8 @@ export default function Skills() {
           <p className="text-white/60 text-base md:text-lg font-light tracking-wide leading-relaxed mb-5">
             Je suis <span className="text-white font-medium">développeur web FullStack freelance</span>,
             spécialisé dans la conception et le développement d'applications web modernes — de la
-            maquette jusqu'au déploiement. J'interviens aussi bien sur des projets from scratch que
-            sur des missions de renfort ou de refonte.
+            maquette jusqu'au déploiement. J'intègre l'IA dans mes projets (génération, automatisation, LLM)
+            et j'interviens aussi bien sur des projets from scratch que sur des missions de renfort ou de refonte.
           </p>
           <p className="text-white/60 text-base font-light tracking-wide leading-relaxed mb-8">
             En parallèle, je suis <span className="text-white font-medium">formateur chez The Hacking Project</span>,
@@ -47,13 +47,6 @@ export default function Skills() {
             </div>
           </div>
 
-          <a
-            href="/cv.pdf"
-            download
-            className="inline-flex items-center gap-2 border border-white/10 text-white/70 hover:border-tiffany hover:text-tiffany text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-300"
-          >
-            Télécharger mon CV
-          </a>
         </div>
 
         {/* Skills grid */}

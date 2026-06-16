@@ -10,6 +10,7 @@ import figmaLogo from '../assets/img/skills-logo/figma-logo.svg'
 import githubLogo from '../assets/img/skills-logo/github-logo.svg'
 import strapiLogo from '../assets/img/skills-logo/strapi-2.svg'
 import bootstrapLogo from '../assets/img/skills-logo/bootstrap-logo.svg'
+import aiLogo from '../assets/img/skills-logo/ai-logo.svg'
 
 export const skills = [
   { name: 'React', logo: reactLogo },
@@ -24,4 +25,5 @@ export const skills = [
   { name: 'GitHub', logo: githubLogo },
   { name: 'Strapi', logo: strapiLogo },
   { name: 'Bootstrap', logo: bootstrapLogo },
+  { name: 'IA / LLM', logo: aiLogo },
 ]

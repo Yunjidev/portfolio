@@ -5,7 +5,7 @@ const services = [
     icon: Code2,
     title: 'Développement Web',
     description:
-      "Conception et développement d'applications web FullStack performantes, de sites vitrines à des plateformes complexes avec API et base de données.",
+      "Conception et développement d'applications web FullStack performantes, de sites vitrines à des plateformes complexes avec API et base de données. J'intègre également l'IA (LLM, génération, automatisation) pour enrichir les produits.",
   },
   {
     icon: GraduationCap,
