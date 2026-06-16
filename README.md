@@ -1,16 +1,55 @@
-# React + Vite
+# Portfolio — Florian Van Camp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio personnel de Florian Van Camp, développeur web FullStack freelance et formateur chez The Hacking Project.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** + **Vite 8**
+- **Tailwind CSS 3**
+- **Framer Motion** — animations
+- **Lucide React** + **React Icons** — icônes
 
-## React Compiler
+## Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+src/
+├── components/
+│   ├── Hero.jsx        # Section d'accueil avec widgets iOS-style
+│   ├── Services.jsx    # Présentation des services
+│   ├── Projects.jsx    # Galerie des projets
+│   ├── Skills.jsx      # Grille des compétences
+│   ├── Contact.jsx     # Formulaire de contact
+│   ├── Navbar.jsx
+│   └── Footer.jsx
+├── data/
+│   ├── projects.js     # Données des projets freelance
+│   └── skills.js       # Stack technique
+└── assets/
+    └── img/            # Captures d'écran projets + logos
+```
 
-## Expanding the ESLint configuration
+## Lancer le projet
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+## Scripts
+
+| Commande | Description |
+|---|---|
+| `npm run dev` | Serveur de développement |
+| `npm run build` | Build de production |
+| `npm run preview` | Prévisualisation du build |
+| `npm run lint` | Lint ESLint |
+
+## Projets présentés
+
+Kettlecore · Proxilio · DofuCraft · Madroom · L'Étincelle de Lilith · Cautioneo · Mas des Sources · ChronoDAO · Wiki BigTime
+
+## Liens
+
+- [GitHub](https://github.com/Yunjidev)
+- [LinkedIn](https://www.linkedin.com/in/florian-van-camp-102aba262/)
+- [Malt](https://www.malt.fr/profile/florianvancamp)
