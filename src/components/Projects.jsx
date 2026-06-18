@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from 'react'
+import { useState, useRef, useCallback, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react'
 import { FaGithub } from 'react-icons/fa'
@@ -24,9 +24,26 @@ function getOffset(i, current) {
 export default function Projects() {
   const [current, setCurrent] = useState(0)
   const touchStartX = useRef(null)
+  const wheelLock = useRef(false)
+  const carouselRef = useRef(null)
 
   const prev = useCallback(() => setCurrent((i) => (i - 1 + N) % N), [])
   const next = useCallback(() => setCurrent((i) => (i + 1) % N), [])
+
+  useEffect(() => {
+    const el = carouselRef.current
+    if (!el) return
+    const onWheel = (e) => {
+      if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) return
+      e.preventDefault()
+      if (wheelLock.current) return
+      wheelLock.current = true
+      e.deltaX > 0 ? next() : prev()
+      setTimeout(() => { wheelLock.current = false }, 600)
+    }
+    el.addEventListener('wheel', onWheel, { passive: false })
+    return () => el.removeEventListener('wheel', onWheel)
+  }, [next, prev])
 
   function onTouchStart(e) {
     touchStartX.current = e.touches[0].clientX
@@ -65,6 +82,7 @@ export default function Projects() {
       <div className="relative">
         {/* Zone scrollable avec overflow caché */}
         <div
+          ref={carouselRef}
           className="relative min-h-[500px] overflow-hidden"
           onTouchStart={onTouchStart}
           onTouchEnd={onTouchEnd}
@@ -98,9 +116,9 @@ export default function Projects() {
             )
           })}
 
-          {/* Dégradés de fondu sur les bords */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-black to-transparent z-20" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-28 bg-gradient-to-l from-black to-transparent z-20" />
+          {/* Dégradés de fondu sur les bords — desktop uniquement */}
+          <div className="hidden md:block pointer-events-none absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-black to-transparent z-20" />
+          <div className="hidden md:block pointer-events-none absolute inset-y-0 right-0 w-28 bg-gradient-to-l from-black to-transparent z-20" />
         </div>
 
         {/* Navigation */}
