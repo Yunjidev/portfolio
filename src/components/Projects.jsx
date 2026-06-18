@@ -34,11 +34,18 @@ export default function Projects() {
     const el = carouselRef.current
     if (!el) return
     const onWheel = (e) => {
-      if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) return
+      const absX = Math.abs(e.deltaX)
+      const absY = Math.abs(e.deltaY)
+      // trackpad horizontal → deltaX dominant
+      // souris desktop → deltaY uniquement (deltaX = 0)
+      const isHorizontalTrackpad = absX > absY
+      const isMouseWheel = absX < 2 && absY > 0
+      if (!isHorizontalTrackpad && !isMouseWheel) return
       e.preventDefault()
       if (wheelLock.current) return
       wheelLock.current = true
-      e.deltaX > 0 ? next() : prev()
+      const delta = isHorizontalTrackpad ? e.deltaX : e.deltaY
+      delta > 0 ? next() : prev()
       setTimeout(() => { wheelLock.current = false }, 600)
     }
     el.addEventListener('wheel', onWheel, { passive: false })
